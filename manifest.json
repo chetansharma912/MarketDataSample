@@ -1,0 +1,22 @@
+{
+    "name": "MS",
+    "version": "1.0.0",
+    "description": "MS",
+    "manifest_version": 3,
+    "author": "Chetan Sharma",
+	"content_scripts" : [
+		{
+			"js" : ["content.js"],
+			"matches" : [
+				"https://kite.zerodha.com/*",
+				"file:///B:/Ext/Nifty/zerodha.html"
+			]
+		}
+	],
+	"permissions" : [
+		"tabs",
+		"storage"
+		
+	]
+	
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Market</title>
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container" style="width: 100%;">
+        <h2 class="text-center"></h2>
+        <div class="row">
+			<div class="col-md-3">
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th>Index</th>
+							<th>Value</th>
+							<th>Perentage</th>
+							<th>Change</th>
+						</tr>
+					</thead>
+					<tbody id="indexrows">
+						
+					</tbody>
+				</table>
+			</div>
+			<div class="col-md-6">
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th>Graph</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr><td>s</td></tr>
+						<tr><td>s</td></tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="col-md-3">
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th>Advance</th>
+							<th>Silent</th>
+							<th>Decline</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="text-center bg-success"><span id="advanced">xxx</span></td>
+							<td class="text-center"><span id="silent">xxx</span></td>
+							<td class="text-center bg-danger"><span id="decline">xxx</span></td>
+						</tr>
+						<tr>
+							<td class="text-center" colspan="3">
+								<input type="radio" name="sort" onclick="sortx('S')"> Sorted
+								<input type="radio" name="sort" onclick="sortx('O')"> Original
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		
+		<div id="stocksrows" class="row">
+			
+		</div>
+		<div id="advancedDeclineData" class="row">
+			
+		</div>
+		<div class="buySellBar">
+			
+		</div>
+		
+    </div>
+	
+	
+
+	
+	<style>
+		table{
+			font-size:12px;
+			font-weight:700;
+		}
+		.slider{
+			display:flex;
+			position:relative;
+			width:100%;
+			height:10px;
+		}
+		.bars{
+			display:inline-block;
+			width:50%;
+		}
+		.tick{
+			position:absolute;
+			width:2px;
+			height:20px;
+			background:black;
+			bottom: -6px;
+		}
+		.LC{
+			left:0;
+			.text{
+				bottom: -15px;
+				left: 0%;
+				position: absolute;
+			}
+		}
+		.UC{
+			right:0;
+			.text{
+				bottom: -15px;
+				right: 0%;
+				position: absolute;
+			}
+		}
+		.open,.close,.prevClose,.low,.high{
+			left:50%;
+			.text{
+				bottom: -15px;
+				right: -10px;
+				position: absolute;
+				margin: auto;
+			}
+		}
+		.green{
+			background:green;
+		}
+		.red{
+			background:red;
+		}
+		.card{
+			font-size:10px;
+			padding:10px;
+			margin:2px;
+			box-shadow: 0.5px 1px 0.5px black;
+		}
+		#advancedDeclineData{
+			display:none;
+		}
+		#stocksrows,#advancedDeclineData{
+			justify-content: center;
+		}
+	</style>
+	<script>
+		//window.onload = ()=>{
+			function sortx(s){
+				if(s=="S"){
+					document.querySelector("#stocksrows").style.display="none";
+					document.querySelector("#advancedDeclineData").style.display="flex";
+				}else{
+					document.querySelector("#stocksrows").style.display="flex";
+					document.querySelector("#advancedDeclineData").style.display="none";
+				}
+			}
+		//}
+	
+	</script>
+	
+</body>
+</html>
