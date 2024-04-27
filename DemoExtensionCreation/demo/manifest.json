@@ -1,0 +1,25 @@
+{
+    "name": "Demo",
+    "version": "1.0.0",
+    "description": "This is demo",
+    "manifest_version": 3,
+    "author": "Chetan Sharma",
+	"content_scripts" : [
+		{
+			"js" : ["content.js"],
+			"matches" : [
+				"file:///B:/Ext/demo/a.html",
+				"file:///B:/Ext/demo/b.html"
+			]
+		}
+	],
+	"action":{
+        "default_popup": "popup.html",
+        "default_title": "Index"
+    },
+	"permissions" : [
+		"tabs",
+		"storage"
+	]
+	
+}
