@@ -6,10 +6,9 @@
     "author": "Chetan Sharma",
 	"content_scripts" : [
 		{
-			"js" : ["content.js"],
+			"js" : ["bootstrap_demo.js","style.js","createDiv.js","format.js","content.js"],
 			"matches" : [
-				"https://kite.zerodha.com/*",
-				"file:///B:/Ext/Nifty/zerodha.html"
+				"https://kite.zerodha.com/*"
 			]
 		}
 	],
